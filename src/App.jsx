@@ -1,21 +1,9 @@
-// import { SplitScreen } from "./SplitScreen"
-// const LeftHandComponent = ()=>{
-//   return <h1 style={{backgroundColor: 'green'}}>Left!</h1>
-// }
-// const RightHandComponent = ()=>{
-//   return <p style={{backgroundColor: 'red'}}>Right!</p>
-
-import { UncontrolledModal } from "./UncontrolledModal"
-import { NumberedList } from "./NumberedList"
-import { LargePersonListItem } from "./People/LargePersonListItem"
-import { SmallPersonListItem } from "./People/SmallPersonListItem"
+import ListApp from "./Lists/ListApp"
 import { LargeProductListItem } from "./Products/LargeProductsListItem"
-import { SmallProductListItem } from "./Products/SmallProductsListItem"
-import { RegularList } from "./RegularList"
-import OnboardingApp from "./OnboardingFlow/OnboardingApp"
+import SplitScreenApp from "./SplitScreen/SplitScreenApp"
+import { UncontrolledModal } from "./UncontrolledModal"
 
-// }
-const people = [
+export const people = [
   {
     name: 'John Doe',
     age: 54,
@@ -36,7 +24,7 @@ const people = [
   },
 ]
 
-const products = [
+export const products = [
   {
     name: 'Flat-Screen Tv',
     price: '$300',
@@ -59,37 +47,12 @@ const products = [
 function App() {
 
   return (
-    // <SplitScreen
-      // left={LeftHandComponent}
-      // right={RightHandComponent}
-    //   leftWeight={1}
-    //   rightWeight={3}
-    // >
-    //   <LeftHandComponent/>
-    //   <RightHandComponent/>
-    // </SplitScreen>
-    <>
-      {/* <RegularList
-        items={people}
-        resourseName='person'
-        itemComponent={SmallPersonListItem}
-      />
-
-      <RegularList
-        items={people}
-        resourseName='person'
-        itemComponent={LargePersonListItem}
-        />
-      <NumberedList
-        items={products}
-        resourseName='product'
-        itemComponent={SmallProductListItem} */}
-        {/* <Modal>
-          <LargeProductListItem product={products[0]}/>
-        </Modal> */}
-      {/* /> */}
-      <OnboardingApp/>
-    </>
+      // <SplitScreenApp/>
+      // <ListApp/>
+      // <OnboardingApp/>
+      <UncontrolledModal>
+        <LargeProductListItem products={products[0]}/>
+      </UncontrolledModal>
   )
 }
 
