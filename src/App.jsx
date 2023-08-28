@@ -1,7 +1,9 @@
 import ListApp from "./Lists/ListApp"
 import { LargeProductListItem } from "./Products/LargeProductsListItem"
 import SplitScreenApp from "./SplitScreen/SplitScreenApp"
-import { UncontrolledModal } from "./UncontrolledModal"
+import { UncontrolledModal } from "./Modal/UncontrolledModal"
+import UncontrolledModalApp from "./Modal/UncontrolledModalApp"
+import ContainerComponentApp from "./ContainerComponent/ContainerComponentApp"
 
 export const people = [
   {
@@ -49,10 +51,10 @@ function App() {
   return (
       // <SplitScreenApp/>
       // <ListApp/>
+      // <UncontrolledModalApp/>
+      <ContainerComponentApp/>
       // <OnboardingApp/>
-      <UncontrolledModal>
-        <LargeProductListItem products={products[0]}/>
-      </UncontrolledModal>
+    
   )
 }
 
