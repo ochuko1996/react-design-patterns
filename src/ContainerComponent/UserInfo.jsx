@@ -1,6 +1,5 @@
 export const UserInfo = ({user})=>{
     const {name, age, hairColor, hobbies} = user || {}
-    console.log(user);
     return user ? (
         <>
             <h3>{name}</h3>

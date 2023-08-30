@@ -4,6 +4,7 @@ import SplitScreenApp from "./SplitScreen/SplitScreenApp"
 import { UncontrolledModal } from "./Modal/UncontrolledModal"
 import UncontrolledModalApp from "./Modal/UncontrolledModalApp"
 import ContainerComponentApp from "./ContainerComponent/ContainerComponentApp"
+import ControlledApp from "./ControlledModal/ControlledApp"
 
 export const people = [
   {
@@ -52,8 +53,9 @@ function App() {
       // <SplitScreenApp/>
       // <ListApp/>
       // <UncontrolledModalApp/>
-      <ContainerComponentApp/>
+      // <ContainerComponentApp/>
       // <OnboardingApp/>
+      <ControlledApp/>
     
   )
 }

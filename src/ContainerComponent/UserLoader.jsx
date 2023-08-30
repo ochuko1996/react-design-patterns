@@ -1,15 +1,15 @@
 import React, { useState, useEffect }  from "react";
 import axios from "axios";
 
-function UserLoader({children}) {
+function UserLoader({userId, children}) {
     const [user, setUser] = useState(null)
     useEffect(()=>{
         (async ()=> {
             // use whatever fetching api. e.g fetch api or axios 
-           const response = await axios.get('/endpoint') 
+           const response = await axios.get(`http://localhost:8080/users/${userId}`) 
            setUser(response.data)
         })()
-    },[])
+    },[userId])
   return (
     <>
         {

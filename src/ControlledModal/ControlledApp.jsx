@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { ControlledModal } from './ControlledModal'
 function ControlledApp() {
     const [showModal, setShowModal] = useState(false)

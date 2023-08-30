@@ -19,7 +19,7 @@ const ModalBackground = styled.div`
 `
 export const ControlledModal = ({showModal, onRequestClose, children}) => {
 
-    return showModal ?(
+    return showModal ? (
             <ModalBackground onClick={onRequestClose}>
                 <ModalBody onClick={(e)=> e.stopPropagation()}>
                     <button onClick={onRequestClose}>

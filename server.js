@@ -1,9 +1,16 @@
 // const express = require('express');
 import  express  from "express";
-
+import cors from 'cors'
 const app = express();
 
 app.use(express.json());
+app.use(cors())
+app.use((req, res, next)=>{
+   res.setHeader('Access-Control-Allow-Originn', '*');
+   res.setHeader('Access-Control-Allow-Method', 'OPTIONS, POST, PUT, GET, DELETE, PATCH');
+   res.setHeader('Access-Control-Allow-Header', 'Content-Type, Authorization');
+   next();
+})
 
 let currentUser = {
 	name: 'John Doe',
@@ -13,16 +20,19 @@ let currentUser = {
 };
 
 let users = [{
+	id: "123",
 	name: 'John Doe',
 	age: 54,
 	hairColor: 'brown',
 	hobbies: ['swimming', 'bicycling', 'video games'],
 }, {
+	id: "234",
 	name: 'Brenda Smith',
 	age: 33,
 	hairColor: 'black',
 	hobbies: ['golf', 'mathematics'],
 }, {
+	id: "345",
 	name: 'Jane Garcia',
 	age: 27,
 	hairColor: 'blonde',
@@ -30,16 +40,19 @@ let users = [{
 }];
 
 const products = [{
+	id: "123",
 	name: 'Flat-Screen TV',
 	price: '$300',
 	description: 'Huge LCD screen, a great deal',
 	rating: 4.5,
 }, {
+	id: "234",
 	name: 'Basketball',
 	price: '$10',
 	description: 'Just like the pros use',
 	rating: 3.8,
 }, {
+	id: "345",
 	name: 'Running Shoes',
 	price: '$120',
 	description: 'State-of-the-art technology for optimum running',

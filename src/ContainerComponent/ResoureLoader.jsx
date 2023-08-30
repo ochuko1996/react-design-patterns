@@ -6,7 +6,7 @@ function ResourceLoader({resourceUrl, resourceName, children}) {
     useEffect(()=>{
         (async ()=> {
             // use whatever fetching api. e.g fetch api or axios 
-           const response = await axios.get('/endpoint') 
+           const response = await axios.get(resourceUrl) 
            setState(response.data)
         })()
     },[resourceUrl])

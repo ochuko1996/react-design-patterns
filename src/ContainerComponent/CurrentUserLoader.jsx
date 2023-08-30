@@ -5,8 +5,8 @@ function CurrentUserLoader({children}) {
     const [user, setUser] = useState(null)
     useEffect(()=>{
         (async ()=>{
-            const response = await axios.get('/current-user') 
-            console.log(response);
+            const response = await axios.get('http://localhost:8080/current-user') 
+            console.log(response.data);
             setUser(response.data)
         })()
     },[])
