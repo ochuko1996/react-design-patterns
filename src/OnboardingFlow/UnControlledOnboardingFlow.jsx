@@ -10,7 +10,13 @@ function UnControlledOnboardingFlow({children, onFinish}) {
             ...onboardingData,
             ...stepData
         }
-        setCurrentIndex(nextIndex)
+        console.log(updatedData);
+        if (nextIndex < children.length) {
+            setCurrentIndex(nextIndex)
+        }else {
+            onFinish(updatedData)
+        }
+        setOnboardingData(updatedData)
     }
     if (React.isValidElement(currentChild)) {
         return React.cloneElement(currentChild, {goToNext})

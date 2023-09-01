@@ -5,7 +5,8 @@ import { UncontrolledModal } from "./Modal/UncontrolledModal"
 import UncontrolledModalApp from "./Modal/UncontrolledModalApp"
 import ContainerComponentApp from "./ContainerComponent/ContainerComponentApp"
 import ControlledApp from "./ControlledModal/ControlledApp"
-
+import OnboardingApp from "./OnboardingFlow/OnboardingApp"
+import HOCApp from "./HOC/HOCApp"
 export const people = [
   {
     name: 'John Doe',
@@ -55,7 +56,8 @@ function App() {
       // <UncontrolledModalApp/>
       // <ContainerComponentApp/>
       // <OnboardingApp/>
-      <ControlledApp/>
+      // <ControlledApp/>
+      <HOCApp/>
     
   )
 }
