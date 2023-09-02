@@ -7,6 +7,7 @@ import ContainerComponentApp from "./ContainerComponent/ContainerComponentApp"
 import ControlledApp from "./ControlledModal/ControlledApp"
 import OnboardingApp from "./OnboardingFlow/OnboardingApp"
 import HOCApp from "./HOC/HOCApp"
+import FuncProgApp from "./FunctionalProgramming/FuncProgApp"
 export const people = [
   {
     name: 'John Doe',
@@ -57,7 +58,8 @@ function App() {
       // <ContainerComponentApp/>
       // <OnboardingApp/>
       // <ControlledApp/>
-      <HOCApp/>
+      // <HOCApp/>
+      <FuncProgApp/>
     
   )
 }
